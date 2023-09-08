@@ -1,0 +1,6 @@
+build/
+temp/
+
+.idea/
+
+.log
