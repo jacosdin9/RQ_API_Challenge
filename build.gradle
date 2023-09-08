@@ -13,9 +13,19 @@ repositories {
 }
 
 dependencies {
+    def lombokVersion = '1.18.12'
+
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'javax.inject:javax.inject:1'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+//    lombok dependencies
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor("org.projectlombok:lombok:${lombokVersion}")
+
+//    caching dependencies
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    implementation 'org.ehcache:ehcache'
 }
 
 test {
